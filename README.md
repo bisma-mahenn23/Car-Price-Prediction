@@ -21,6 +21,9 @@ The dataset contains the following columns:
    Understand what features are available and how they impact the car price.
 
 2. Feature Engineering
+   - Removed duplicate rows  
+   - Extracted brand from the `name` column  
+   - Transformed `selling_price` using log scale
    - Dropped non-informative columns like car name.
    - Encoded categorical variables using `LabelEncoder`
 
