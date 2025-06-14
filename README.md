@@ -1,6 +1,6 @@
 # Car-Price-Prediction
 
-This project predicts used car prices based on various features like brand, year, fuel type, transmission, etc. It uses regression models to help estimate a car's value using a dataset from CarDekho.
+This project focuses on building a regression model to predict the selling price of a used car based on its specifications like brand, fuel type, transmission, and ownership history.
 
 # Dataset
 
@@ -21,23 +21,19 @@ The dataset contains the following columns:
    Understand what features are available and how they impact the car price.
 
 2. Feature Engineering
-   - Removed duplicate rows  
-   - Extracted brand from the `name` column  
-   - Transformed `selling_price` using log scale  
+   - Dropped non-informative columns like car name.
    - Encoded categorical variables using `LabelEncoder`
 
-3. Model Training & Selection
-   - Used 3 regression models:
-     - Linear Regression
+4. Model Training & Selection
+   - Used 2 regression models:
      - Random Forest Regressor
      - Gradient Boosting Regressor
-   - Split data into training (80%) and testing (20%) sets
 
-4. Model Evaluation 
+5. Model Evaluation 
    - Evaluated models using:
      - MAE (Mean Absolute Error)
      - RMSE (Root Mean Squared Error)
-   - Also performed 5-Fold Cross-Validation and printed average CV RMSE
+   - Also performed 5-Fold Cross-Validation
 
 # Libraries Used
 
@@ -50,9 +46,8 @@ The dataset contains the following columns:
 ------------------------------------------------------------------
 | Model              | MAE                 | RMSE                |
 |--------------------|---------------------|---------------------|
-| Linear Regression  | 0.30153565129181176 | 0.3908131584349638  |
-| Random Forest      | 0.317475005010856   | 0.4229418624351199  |
-| Gradient Boosting  | 0.3633706671768348  | 0.47365417875512167 |
+| Random Forest      | 169243.92989563596  | 393381.45215844986  |
+| Gradient Boosting  | 174824.13205795066  | 396038.79143931455  |
 ------------------------------------------------------------------
 
 # How to Run
